@@ -1,0 +1,26 @@
+import Alpine from "alpinejs";
+import { fetchApi } from "@/js/api.js";
+import { crudTableComponent } from "@/components/crudTable.js";
+import { modalFormComponent } from "@/components/modalForm.js";
+
+Alpine.data("crudEquipos", () => (
+    crudTableComponent({
+        params: {
+            page: "equipos",
+            action: "query",
+        },
+        columns: [
+            { id: "codigo_equipo", name: "Codigo"},
+            "Nombre",
+            "Tipo",
+            "Estado",
+            { name: "Ubicación", id: "ubicacion" },
+        ],
+    })))
+
+Alpine.data("modalEquipos", () => (
+    modalFormComponent({
+        page: "equipos",
+        elementName: "Equipo",
+        editDisableFields: ["codigo"],
+    })))

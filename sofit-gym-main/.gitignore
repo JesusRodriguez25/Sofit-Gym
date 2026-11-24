@@ -1,0 +1,4 @@
+.env
+bootstrap/cache
+uploads/tmp
+database/backups

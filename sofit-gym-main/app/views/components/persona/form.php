@@ -1,0 +1,66 @@
+<?php
+// Formulario compartido para clientes y trabajadores. 
+?>
+
+<fieldset class="row">
+    <label class="col">
+        <span class="form-label">Cédula</span>
+        <input
+            class="form-control"
+            required
+            name="cedula"
+            type="text"
+            pattern="^[V]-\d{8}$"
+            x-mask="V-99999999"
+            @input.debounce.500ms="validateCedula($el)">
+        <small class="text-danger" x-text="errors.cedula"></small>
+    </label>
+
+    <label class="col">
+        <span class="form-label">Nombre</span>
+        <input class="form-control" required name="nombre" type="text" pattern="[A-Za-z]+" minlength="2" maxlength="25">
+        <small class="text-danger" x-text="errors.nombre"></small>
+    </label>
+
+    <label class="col">
+        <span class="form-label">Apellido</span>
+        <input class="form-control" required name="apellido" type="text" pattern="[A-Za-z]+" minlength="2" maxlength="25">
+        <small class="text-danger" x-text="errors.apellido"></small>
+    </label>
+</fieldset>
+
+<fieldset class="row">
+    <label class="col">
+        <span class="form-label">Teléfono</span>
+        <input
+            class="form-control"
+            required
+            name="telefono"
+            type="tel"
+            x-mask="9999-9999999"
+            pattern="04(12|14|16|24|26)-\d{7}">
+        <small class="text-danger" x-text="errors.telefono"></small>
+    </label>
+
+    <label class="col">
+        <span class="form-label">Correo</span>
+        <input class="form-control" required name="correo" type="email">
+        <small class="text-danger" x-text="errors.correo"></small>
+    </label>
+</fieldset>
+
+<fieldset class="row">
+    <label class="col">
+        <span class="form-label">Fecha de nacimiento</span>
+        <input class="form-control" required name="fecha_nacimiento" type="date">
+        <small class="text-danger" x-text="errors.fecha_nacimiento"></small>
+    </label>
+</fieldset>
+
+<fieldset class="row">
+    <label class="col">
+        <span class="form-label">Dirección</span>
+        <textarea class="form-control" name="direccion" maxlength="200"></textarea>
+        <small class="text-danger" x-text="errors.direccion"></small>
+    </label>
+</fieldset>

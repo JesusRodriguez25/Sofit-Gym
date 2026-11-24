@@ -1,0 +1,22 @@
+/** CSS global compartido por todas las vistas. */
+
+/** Variables globales */
+:root {
+    --primary-bg: #C62828;
+    --primary-color: #C62828;
+}
+
+.card-header {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/** Bootstrap Overrides */
+.form-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5a6e7a;
+}

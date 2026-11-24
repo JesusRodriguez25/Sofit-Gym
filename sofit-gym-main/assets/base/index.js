@@ -1,0 +1,1 @@
+// JavaScript global compartido por todas las vistas.
