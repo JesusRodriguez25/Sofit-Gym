@@ -203,11 +203,18 @@ $dropdown = function (
 			title: "Reportes estadisticos",
 			items: [
 				[
+					"permiso" => "reportes:ver",
+					"url" => "?page=reporteEstadistico",
+					"icon" => "fa-chart-bar",
+					"title" => "Reportes Generales"
+				],
+				[
 					"permiso" => "asistencia:ver",
 					"url" => "?page=asistencia&action=vistaAsistencia",
 					"icon" => "fa-chart-bar",
 					"title" => "Historial de Asistencias"
 				],
+				
 				[
 					"permiso" => "facturacion:ver",
 					"url" => "?page=facturacion&action=reporteVista",
